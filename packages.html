@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Team V | Packages</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">Team <span>V</span></div>
+  <nav>
+    <a href="index.html">الرئيسية</a>
+      <a href="fields.html">الكورسات</a>
+      <a href="packages.html" class="active">الباقات</a>
+      <a href="apply.html">عن Team V</a>
+      <a href="contact.html">تواصل معنا</a>
+  </nav>
+</header>
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>البكدجات | Team V</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  font-family:Cairo,sans-serif;
+  background:linear-gradient(180deg,#1f2a44,#243b6b);
+  color:#fff;
+}
+header{
+  background:#162038;
+  padding:18px;
+  text-align:center;
+  font-size:22px;
+  font-weight:bold;
+}
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:25px 20px 80px;
+}
+.box{
+  background:rgba(255,255,255,0.08);
+  padding:20px;
+  border-radius:20px;
+  margin-bottom:30px;
+}
+h2{
+  color:#f5c400;
+}
+label{
+  display:block;
+  background:rgba(0,0,0,0.35);
+  padding:14px;
+  border-radius:14px;
+  margin-bottom:12px;
+  cursor:pointer;
+  transition:.3s;
+}
+label:hover{
+  transform:scale(1.02);
+}
+input{
+  margin-left:10px;
+  transform:scale(1.2);
+}
+label.active{
+  border:2px solid #f5c400;
+  box-shadow:0 0 12px rgba(245,196,0,.6);
+}
+.fixed{
+  opacity:.7;
+}
+button{
+  width:100%;
+  padding:16px;
+  border:none;
+  border-radius:40px;
+  background:linear-gradient(135deg,#f5c400,#ffe680);
+  font-size:18px;
+  font-weight:bold;
+  cursor:pointer;
+}
+.info{
+  font-size:14px;
+  opacity:.85;
+  margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+
+
+<div class="container">
+
+<div class="box">
+<h2>📦 اختر البكدج</h2>
+
+<label>
+<input type="radio" name="package" value="full" data-limit="99">
+Full Career Pack – جميع المجالات  
+<br>💰 13,000 جنيه
+</label>
+
+<label>
+<input type="radio" name="package" value="career" data-limit="3">
+Career Builder – اختر 3 مجالات  
+<br>💰 9,200 جنيه
+</label>
+
+<label>
+<input type="radio" name="package" value="pro" data-limit="1">
+Professional Track – مجال واحد  
+<br>💰 عرض 48 ساعة (2,600 جنيه)
+</label>
+
+<p class="info">
+📌 English + Soft Skills + LinkedIn + AI  
+موجودين تلقائيًا في كل البكدجات
+</p>
+</div>
+
+<div class="box">
+<h2>💼 اختر المجالات</h2>
+
+<label><input type="checkbox" value="Programming"> Programming</label>
+<label><input type="checkbox" value="Digital Marketing"> Digital Marketing</label>
+<label><input type="checkbox" value="Graphic Design"> Graphic Design</label>
+<label><input type="checkbox" value="Video Editing"> Video Editing</label>
+<label><input type="checkbox" value="Content Creation"> Content Creation</label>
+<label><input type="checkbox" value="Entrepreneurship"> Entrepreneurship</label>
+
+<label class="fixed"><input type="checkbox" checked disabled> English Language</label>
+<label class="fixed"><input type="checkbox" checked disabled> Soft Skills</label>
+<label class="fixed"><input type="checkbox" checked disabled> LinkedIn</label>
+<label class="fixed"><input type="checkbox" checked disabled> Artificial Intelligence</label>
+
+</div>
+
+<button onclick="sendWhatsApp()">تأكيد وإرسال واتساب</button>
+
+</div>
+
+<script>
+const packageInputs = document.querySelectorAll('input[name="package"]');
+const fieldInputs = document.querySelectorAll('.box input[type="checkbox"]:not([disabled])');
+
+// تحميل البيانات المحفوظة
+window.onload = () => {
+  const savedPackage = localStorage.getItem("package");
+  const savedFields = JSON.parse(localStorage.getItem("fields") || "[]");
+
+  if(savedPackage){
+    document.querySelector(`input[value="${savedPackage}"]`).checked = true;
+    highlight();
+  }
+  savedFields.forEach(val=>{
+    fieldInputs.forEach(f=>{
+      if(f.value === val) f.checked = true;
+    });
+  });
+};
+
+packageInputs.forEach(p=>{
+  p.addEventListener("change",()=>{
+    localStorage.setItem("package",p.value);
+    fieldInputs.forEach(f=>f.checked=false);
+    localStorage.removeItem("fields");
+    highlight();
+  });
+});
+
+fieldInputs.forEach(f=>{
+  f.addEventListener("change",()=>{
+    const selectedPackage = document.querySelector('input[name="package"]:checked');
+    if(!selectedPackage){
+      alert("اختار البكدج الأول");
+      f.checked=false;
+      return;
+    }
+
+    const limit = parseInt(selectedPackage.dataset.limit);
+    const checked = document.querySelectorAll('.box input[type="checkbox"]:checked:not([disabled])');
+
+    if(checked.length > limit){
+      f.checked=false;
+      alert(`مسموح باختيار ${limit} مجالات فقط`);
+      return;
+    }
+
+    localStorage.setItem("fields",JSON.stringify(
+      Array.from(checked).map(i=>i.value)
+    ));
+    highlight();
+  });
+});
+
+function highlight(){
+  document.querySelectorAll("label").forEach(l=>l.classList.remove("active"));
+  document.querySelectorAll("input:checked").forEach(i=>{
+    i.parentElement.classList.add("active");
+  });
+}
+
+function sendWhatsApp(){
+  const phone = "201094855679";
+  const pkg = document.querySelector('input[name="package"]:checked');
+  const fields = document.querySelectorAll('.box input[type="checkbox"]:checked');
+
+  if(!pkg){ alert("اختار البكدج"); return; }
+
+  let pkgName = pkg.value === "full" ? "Full Career Pack" :
+                pkg.value === "career" ? "Career Builder" :
+                "Professional Track";
+
+  let msg = `مرحبا Team V 👋\n\n📦 البكدج:\n${pkgName}\n\n💼 المجالات:\n`;
+
+  fields.forEach(f=> msg += `- ${f.value}\n`);
+
+  msg += "\nجاهز للتواصل 🙌";
+
+  window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`,"_blank");
+}
+</script>
+
+<!-- ===== FOOTER ===== -->
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<footer class="site-footer">
+
+  <div class="footer-container">
+
+    <!-- Brand -->
+    <div class="footer-box">
+      <h3>Team <span>V</span></h3>
+      <p>
+        منصة تعليمية متخصصة في إعداد الشباب لسوق العمل  
+        من خلال مسارات عملية ومهارات مطلوبة فعليًا.
+      </p>
+    </div>
+
+    <!-- Partners -->
+    <div class="footer-box">
+      <h4>Partners</h4>
+      <p>Plan B Academy</p>
+      <p>Lead Organization</p>
+    </div>
+
+    <!-- Links -->
+    <div class="footer-box">
+      <h4>روابط سريعة</h4>
+      <a href="index.html">الرئيسية</a>
+      <a href="fields.html">الكورسات</a>
+      <a href="packages.html">الباقات</a>
+      <a href="apply.html">عن Team V</a>
+      <a href="contact.html">تواصل معنا</a>
+    </div>
+
+    <!-- Contact & Social -->
+    <div class="footer-box">
+      <h4>تواصل معنا</h4>
+
+      <p>
+        <i class="fa-solid fa-phone"></i>
+        <a href="tel:01094855679">01094855679</a>
+      </p>
+      <p>
+        <i class="fa-solid fa-phone"></i>
+        <a href="tel:01501503833">01501503833</a>
+      </p>
+
+      <div class="social">
+        <a href="https://www.facebook.com/hamdy.alrifai1?mibextid=ZbWKwL" target="_blank">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/hamdy.alrifai1?igsh=MWpnaXF2d2hyYnI2Zg==" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/201094855679" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Team V — Powered by Plan B & Lead Organization
+  </div>
+
+</footer>
+
+<style>
+.site-footer{
+  background:#0f172a;
+  color:#fff;
+  margin-top:80px;
+}
+.footer-container{
+  max-width:1100px;
+  margin:auto;
+  padding:50px 20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+}
+.footer-box h3{
+  font-size:22px;
+  margin-bottom:12px;
+}
+.footer-box h3 span{
+  color:#f5c400;
+}
+.footer-box h4{
+  color:#f5c400;
+  margin-bottom:12px;
+}
+.footer-box p,
+.footer-box a{
+  font-size:14px;
+  line-height:1.8;
+  opacity:.9;
+  color:#fff;
+  text-decoration:none;
+  display:block;
+}
+.footer-box a:hover{
+  color:#f5c400;
+}
+
+/* Social Icons */
+.social{
+  display:flex;
+  gap:12px;
+  margin-top:12px;
+}
+.social a{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.12);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  transition:.3s;
+}
+.social a:hover{
+  background:#f5c400;
+  color:#000;
+}
+
+.footer-bottom{
+  text-align:center;
+  padding:18px;
+  background:#020617;
+  font-size:14px;
+  opacity:.8;
+}
+</style>
+
+</body>
+</html>

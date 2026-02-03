@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Team V | Learn Future Skills</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Team <span>V</span></div>
+
+    <nav>
+      <a href="index.html">الرئيسية</a>
+      <a href="fields.html">الكورسات</a>
+      <a href="packages.html">الباقات</a>
+      <a href="apply.html">عن Team V</a>
+      <a href="contact.html">تواصل معنا</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>تعلّم مهارات المستقبل مع Team V</h1>
+    <p>كورسات عملية في البرمجة، الفري لانس، التسويق، والذكاء الاصطناعي</p>
+
+    <div class="hero-buttons">
+      <a href="fields.html" class="btn primary">عرض الكورسات</a>
+      <a href="packages.html" class="btn secondary">الباقات</a>
+    </div>
+  </section>
+
+  <script src="main.js"></script>
+
+
+
+
+
+
+
+
+
+<section class="fields">
+  <h2>المجالات المتاحة</h2>
+
+  <div class="fields-list">
+
+    <a href="programming.html" class="field-row">
+  <img src="https://media.istockphoto.com/id/2176122055/photo/software-development-concept-hands-typing-on-laptop-with-programming-code-on-screen.webp?a=1&b=1&s=612x612&w=0&k=20&c=O7oitte50xfKdK23WSea0XT_iA_0d9MSyuLNrYtOQBM=" alt="Programming">
+  <h3>Programming</h3>
+</a>
+    <a href="marketing.html" class="field-row">
+  <img src="https://i.postimg.cc/LXLkMx4j/dyjytal.webp" alt="Digital Marketing">
+  <h3>Digital Marketing</h3>
+</a>
+
+    <a href="design.html" class="field-row">
+  <img src="https://media.istockphoto.com/id/1192665035/photo/abstract-background-of-geometric-shapes-3d-rendering.webp?a=1&b=1&s=612x612&w=0&k=20&c=aRoaA8KKEvL7KSkKaI8AaggeQRS_lHDbASsSWCz1Chs=" alt="Graphic Design">
+  <h3>Graphic Design</h3>
+</a>
+
+   <a href="video.html" class="field-row">
+  <img src="https://images.unsplash.com/photo-1579109652910-99b9be06aaec?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8VmlkZW8lMjBFZGl0aW5nJTIwJUUyJTg2JTkyJTIwdmlkZW8lMjBlZGl0aW5nJTJDJTIwdmlkZW8lMjBwcm9kdWN0aW9ufGVufDB8fDB8fHww" alt="Video Editing">
+  <h3>Video Editing</h3>
+</a>
+
+   <a href="content.html" class="field-row">
+  <img src="https://images.unsplash.com/photo-1764664035176-8e92ff4f128e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Q29udGVudCUyMENyZWF0aW9uJTIwJUUyJTg2JTkyJTIwY29udGVudCUyMGNyZWF0b3IlMkMlMjB5b3V0dWJlJTIwc3R1ZGlvfGVufDB8fDB8fHww" alt="Content Creation">
+  <h3>Content Creation</h3>
+</a>
+
+<a href="business.html" class="field-row">
+  <img src="https://i.postimg.cc/zf1Xc7M5/lryadh.webp" alt="Entrepreneurship">
+  <h3>Entrepreneurship</h3>
+</a>
+
+   <a href="english.html" class="field-row">
+  <img src="https://i.postimg.cc/02T8zZ90/anjlyzy.webp" alt="English Language">
+  <h3>English Language</h3>
+</a>
+
+ <a href="ai.html" class="field-row">
+  <img src="https://i.postimg.cc/TwNxfJkm/dhkaʾ.webp" alt="Artificial Intelligence">
+  <h3>Artificial Intelligence</h3>
+</a>   
+
+  </div>
+</section>
+
+
+
+
+
+
+<style>
+/* ===== FAQ STYLE ===== */
+.faq {
+  max-width: 700px;
+  margin: 40px auto 60px;
+  padding: 0 15px;
+}
+
+.faq h2 {
+  text-align: center;
+  color: #f5c400;
+  margin-bottom: 30px;
+}
+
+.faq-item {
+  background: #111;
+  border-radius: 16px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(255,255,255,0.05);
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 18px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question span {
+  font-size: 22px;
+  color: #f5c400;
+  transition: 0.3s;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  background: #0c0c0c;
+  transition: max-height 0.4s ease;
+}
+
+.faq-answer p {
+  padding: 15px 20px;
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.7;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px;
+}
+
+.faq-item.active .faq-question span {
+  transform: rotate(45deg);
+}
+</style>
+
+<script>
+/* ===== FAQ SCRIPT ===== */
+document.querySelectorAll(".faq-question").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const item = btn.parentElement;
+    item.classList.toggle("active");
+  });
+});
+</script>
+<!-- ===== END FAQ ===== -->
+
+
+
+
+
+
+
+
+
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<section class="stats-clean">
+
+  <p class="stats-text">
+    الانضمام إلى فريق المدربين يمكن أن يكون خطوة  
+    مهمة نحو تحقيق أهدافك المهنية والشخصية
+  </p>
+
+  <div class="stat-item">
+    <div class="circle">
+      <i class="fa-solid fa-star"></i>
+    </div>
+    <h3 class="counter" data-target="100000">0</h3>
+    <span>تقييم إيجابي</span>
+  </div>
+
+  <div class="stat-item">
+    <div class="circle">
+      <i class="fa-solid fa-user-graduate"></i>
+    </div>
+    <h3 class="counter" data-target="70000">0</h3>
+    <span>متدرب</span>
+  </div>
+
+  <div class="stat-item">
+    <div class="circle">
+      <i class="fa-solid fa-chalkboard-user"></i>
+    </div>
+    <h3 class="counter" data-target="124">0</h3>
+    <span>خبير</span>
+  </div>
+
+  <div class="stat-item">
+    <div class="circle">
+      <i class="fa-solid fa-book-open-reader"></i>
+    </div>
+    <h3 class="counter" data-target="120">0</h3>
+    <span>دورات متنوعة</span>
+  </div>
+
+</section>
+
+<style>
+.stats-clean{
+  max-width:900px;
+  margin:100px auto;
+  padding:0 20px;
+  text-align:center;
+  color:#fff;
+}
+
+.stats-text{
+  font-size:18px;
+  line-height:1.9;
+  margin-bottom:70px;
+  opacity:.95;
+}
+
+.stat-item{
+  margin-bottom:70px;
+}
+
+.circle{
+  width:95px;
+  height:95px;
+  margin:0 auto 15px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.15);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.circle i{
+  font-size:40px;
+  color:#ffffff;
+}
+
+.stat-item h3{
+  font-size:44px;
+  font-weight:bold;
+  margin:10px 0 5px;
+}
+
+.stat-item span{
+  font-size:18px;
+  opacity:.9;
+}
+
+/* موبايل */
+@media(max-width:768px){
+  .stats-text{
+    font-size:16px;
+  }
+}
+</style>
+
+<script>
+const counters = document.querySelectorAll(".counter");
+
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      const el = entry.target;
+      const target = +el.dataset.target;
+      let count = 0;
+      const step = target / 120;
+
+      const update = ()=>{
+        count += step;
+        if(count < target){
+          el.textContent = Math.floor(count);
+          requestAnimationFrame(update);
+        } else {
+          el.textContent = target;
+        }
+      };
+      update();
+      observer.unobserve(el);
+    }
+  });
+},{threshold:0.5});
+
+counters.forEach(c=>observer.observe(c));
+</script>
+
+
+
+
+
+
+
+
+
+
+<!-- ===== TIMELINE SECTION ===== -->
+<section class="timeline-section">
+
+  <h2>رحلتك مع Team V</h2>
+  <p class="timeline-subtitle">
+    خطوات واضحة من أول التسجيل لحد ما تبقى جاهز للشغل
+  </p>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="timeline-icon">
+        <i class="fa-solid fa-user-plus"></i>
+      </div>
+      <div class="timeline-content">
+        <h3>التسجيل</h3>
+        <p>بتختار المجال والبكدج المناسب ليك بكل سهولة</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-icon">
+        <i class="fa-solid fa-book-open-reader"></i>
+      </div>
+      <div class="timeline-content">
+        <h3>التعلّم</h3>
+        <p>شرح مبسط + تطبيق عملي خطوة بخطوة</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-icon">
+        <i class="fa-solid fa-code"></i>
+      </div>
+      <div class="timeline-content">
+        <h3>المشاريع</h3>
+        <p>تنفيذ مشاريع تحاكي سوق العمل الحقيقي</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-icon">
+        <i class="fa-solid fa-briefcase"></i>
+      </div>
+      <div class="timeline-content">
+        <h3>التأهيل للشغل</h3>
+        <p>CV – LinkedIn – Freelancing – مقابلات</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-icon">
+        <i class="fa-solid fa-trophy"></i>
+      </div>
+      <div class="timeline-content">
+        <h3>جاهز لسوق العمل</h3>
+        <p>تبني كارير حقيقي وتبدأ تحقق دخل</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+<!-- ===== STATS SECTION ===== -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<section class="stats-section">
+
+  <div class="stat-box">
+    <div class="stat-circle">
+      <i class="fa-solid fa-user-graduate"></i>
+    </div>
+    <h3 class="counter stat-number" data-target="70000">70000</h3>
+    <p>متدرب</p>
+  </div>
+
+  <div class="stat-box">
+    <div class="stat-circle">
+      <i class="fa-solid fa-star"></i>
+    </div>
+    <h3 class="counter stat-number" data-target="100000">100000</h3>
+    <p>تقييم إيجابي</p>
+  </div>
+
+  <div class="stat-box">
+    <div class="stat-circle">
+      <i class="fa-solid fa-book-open-reader"></i>
+    </div>
+    <h3 class="counter stat-number" data-target="120">120</h3>
+    <p>دورة تدريبية</p>
+  </div>
+
+</section>
+
+<style>
+/* ===== STATS STYLE ===== */
+.stats-section{
+  max-width:1100px;
+  margin:120px auto;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:40px;
+  text-align:center;
+  color:#fff;
+}
+
+/* الدواير */
+.stat-circle{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.15);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto 15px;
+}
+.stat-circle i{
+  font-size:34px;
+  color:#f5c400;
+}
+
+/* ===== الرقم (حل نهائي) ===== */
+.stat-number{
+  color:#ffffff !important;
+  font-size:42px;
+  font-weight:bold;
+}
+
+/* النص */
+.stats-section p{
+  opacity:.9;
+}
+</style>
+
+<script>
+/* ===== COUNTER SCRIPT ===== */
+const counters = document.querySelectorAll(".counter");
+
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      const el = entry.target;
+      const target = +el.dataset.target;
+      let count = 0;
+      const step = target / 120;
+
+      const update = ()=>{
+        count += step;
+        if(count < target){
+          el.textContent = Math.floor(count);
+          requestAnimationFrame(update);
+        }else{
+          el.textContent = target;
+        }
+      };
+      update();
+      observer.unobserve(el);
+    }
+  });
+},{threshold:0.5});
+
+counters.forEach(c=>observer.observe(c));
+</script>
+
+
+
+
+
+
+
+
+
+
+<!-- ===== WHY TEAM V SECTION ===== -->
+<section class="why-teamv">
+
+  <h2>ليه Team V هتفرق معاك؟</h2>
+  <p class="subtitle">
+    مش بنعلّمك كورس… إحنا بنجهّزك لسوق العمل
+  </p>
+
+  <div class="why-grid">
+
+    <div class="why-box">
+      <i class="fa-solid fa-road"></i>
+      <h3>طريق واضح</h3>
+      <p>
+        من أول خطوة لحد الشغل  
+        من غير تشتّت أو عشوائية
+      </p>
+    </div>
+
+    <div class="why-box">
+      <i class="fa-solid fa-laptop-code"></i>
+      <h3>تطبيق عملي</h3>
+      <p>
+        مشاريع حقيقية  
+        تحاكي اللي بيحصل في الشغل
+      </p>
+    </div>
+
+    <div class="why-box">
+      <i class="fa-solid fa-briefcase"></i>
+      <h3>جاهز لسوق العمل</h3>
+      <p>
+        مهارات مطلوبة فعلًا  
+        مش كلام نظري
+      </p>
+    </div>
+
+    <div class="why-box">
+      <i class="fa-solid fa-headset"></i>
+      <h3>دعم ومتابعة</h3>
+      <p>
+        مش لوحدك  
+        معاك فريق بيدعمك
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+.why-teamv{
+  max-width:1100px;
+  margin:100px auto;
+  padding:0 20px;
+  text-align:center;
+  color:#fff;
+}
+.why-teamv h2{
+  color:#f5c400;
+  font-size:30px;
+  margin-bottom:10px;
+}
+.subtitle{
+  opacity:.9;
+  margin-bottom:50px;
+  font-size:16px;
+}
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+}
+.why-box{
+  background:rgba(255,255,255,0.08);
+  padding:30px 20px;
+  border-radius:22px;
+  transition:.4s;
+}
+.why-box:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 25px rgba(245,196,0,.4);
+}
+.why-box i{
+  font-size:36px;
+  color:#f5c400;
+  margin-bottom:15px;
+}
+.why-box h3{
+  margin-bottom:10px;
+  font-size:18px;
+}
+.why-box p{
+  font-size:14px;
+  line-height:1.8;
+  opacity:.9;
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ===== FINAL CTA SECTION ===== -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<section class="final-cta">
+
+  <h2>جاهز تبدأ رحلتك مع Team V؟</h2>
+  <p class="cta-sub">
+    آلاف المتدربين بدأوا من الصفر ووصلوا لنتيجة حقيقية  
+    الدور عليك تبدأ دلوقتي
+  </p>
+
+  <div class="proof">
+    <div class="proof-item">
+      <i class="fa-solid fa-user-graduate"></i>
+      <span>70,000+</span>
+      <small>متدرب</small>
+    </div>
+    <div class="proof-item">
+      <i class="fa-solid fa-star"></i>
+      <span>100,000+</span>
+      <small>تقييم إيجابي</small>
+    </div>
+    <div class="proof-item">
+      <i class="fa-solid fa-briefcase"></i>
+      <span>مسارات عملية</span>
+      <small>لسوق العمل</small>
+    </div>
+  </div>
+
+  <div class="cta-buttons">
+    <a href="contact.html" class="btn-primary">
+      سجّل دلوقتي
+    </a>
+    <a href="fieldes.html" class="btn-outline">
+      استكشف المجالات
+    </a>
+  </div>
+
+</section>
+
+<style>
+.final-cta{
+  max-width:1100px;
+  margin:120px auto 140px;
+  padding:60px 20px;
+  text-align:center;
+  color:#fff;
+  background:linear-gradient(180deg,rgba(245,196,0,.15),rgba(0,0,0,.25));
+  border-radius:28px;
+}
+.final-cta h2{
+  color:#f5c400;
+  font-size:32px;
+  margin-bottom:12px;
+}
+.cta-sub{
+  opacity:.95;
+  margin-bottom:40px;
+  line-height:1.8;
+}
+.proof{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:25px;
+  margin-bottom:45px;
+}
+.proof-item{
+  background:rgba(0,0,0,.35);
+  padding:25px 20px;
+  border-radius:22px;
+}
+.proof-item i{
+  font-size:34px;
+  color:#f5c400;
+  margin-bottom:10px;
+}
+.proof-item span{
+  display:block;
+  font-size:22px;
+  font-weight:bold;
+}
+.proof-item small{
+  opacity:.85;
+}
+.cta-buttons{
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  flex-wrap:wrap;
+}
+.btn-primary{
+  padding:16px 42px;
+  border-radius:40px;
+  background:linear-gradient(135deg,#f5c400,#ffe680);
+  color:#000;
+  font-weight:bold;
+  text-decoration:none;
+  font-size:18px;
+}
+.btn-outline{
+  padding:16px 42px;
+  border-radius:40px;
+  border:2px solid #f5c400;
+  color:#f5c400;
+  text-decoration:none;
+  font-size:18px;
+}
+.btn-outline:hover{
+  background:#f5c400;
+  color:#000;
+}
+</style>
+
+<!-- ===== FOOTER ===== -->
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<footer class="site-footer">
+
+  <div class="footer-container">
+
+    <!-- Brand -->
+    <div class="footer-box">
+      <h3>Team <span>V</span></h3>
+      <p>
+        منصة تعليمية متخصصة في إعداد الشباب لسوق العمل  
+        من خلال مسارات عملية ومهارات مطلوبة فعليًا.
+      </p>
+    </div>
+
+    <!-- Partners -->
+    <div class="footer-box">
+      <h4>Partners</h4>
+      <p>Plan B Academy</p>
+      <p>Lead Organization</p>
+    </div>
+
+    <!-- Links -->
+    <div class="footer-box">
+      <h4>روابط سريعة</h4>
+      <a href="index.html">الرئيسية</a>
+      <a href="fields.html">الكورسات</a>
+      <a href="packages.html">الباقات</a>
+      <a href="apply.html">عن Team V</a>
+      <a href="contact.html">تواصل معنا</a>
+    </div>
+
+    <!-- Contact & Social -->
+    <div class="footer-box">
+      <h4>تواصل معنا</h4>
+
+      <p>
+        <i class="fa-solid fa-phone"></i>
+        <a href="tel:01094855679">01094855679</a>
+      </p>
+      <p>
+        <i class="fa-solid fa-phone"></i>
+        <a href="tel:01501503833">01501503833</a>
+      </p>
+
+      <div class="social">
+        <a href="https://www.facebook.com/hamdy.alrifai1?mibextid=ZbWKwL" target="_blank">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/hamdy.alrifai1?igsh=MWpnaXF2d2hyYnI2Zg==" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/201094855679" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Team V — Powered by Plan B & Lead Organization
+  </div>
+
+</footer>
+
+<style>
+.site-footer{
+  background:#0f172a;
+  color:#fff;
+  margin-top:80px;
+}
+.footer-container{
+  max-width:1100px;
+  margin:auto;
+  padding:50px 20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+}
+.footer-box h3{
+  font-size:22px;
+  margin-bottom:12px;
+}
+.footer-box h3 span{
+  color:#f5c400;
+}
+.footer-box h4{
+  color:#f5c400;
+  margin-bottom:12px;
+}
+.footer-box p,
+.footer-box a{
+  font-size:14px;
+  line-height:1.8;
+  opacity:.9;
+  color:#fff;
+  text-decoration:none;
+  display:block;
+}
+.footer-box a:hover{
+  color:#f5c400;
+}
+
+/* Social Icons */
+.social{
+  display:flex;
+  gap:12px;
+  margin-top:12px;
+}
+.social a{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.12);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  transition:.3s;
+}
+.social a:hover{
+  background:#f5c400;
+  color:#000;
+}
+
+.footer-bottom{
+  text-align:center;
+  padding:18px;
+  background:#020617;
+  font-size:14px;
+  opacity:.8;
+}
+</style>
+
+</body>
+</html>

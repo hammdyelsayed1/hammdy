@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artificial Intelligence | Team V</title>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team V | About Us</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">Team <span>V</span></div>
+  <nav>
+    <a href="index.html">الرئيسية</a>
+      <a href="fields.html">الكورسات</a>
+      <a href="packages.html">الباقات</a>
+      <a href="apply.html" class="active">عن Team V</a>
+      <a href="contact.html">تواصل معنا</a>
+  </nav>
+</header>
+
+
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Cairo, sans-serif;
+      background: #0b0b0b;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      height: 60vh;
+      background: url("assets/images/ai.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      color: #f5c400;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 17px;
+      line-height: 1.9;
+      opacity: 0.95;
+    }
+
+    /* ===== CONTAINER ===== */
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    .section {
+      margin-bottom: 70px;
+    }
+
+    .section h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #7fddff;
+      border-right: 5px solid #f5c400;
+      padding-right: 12px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.07);
+      padding: 25px;
+      border-radius: 22px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      color: #f5c400;
+    }
+
+    .card ul {
+      padding-right: 18px;
+      line-height: 2;
+      font-size: 15px;
+    }
+
+    /* ===== CTA ===== */
+    .cta {
+      text-align: center;
+      margin-top: 80px;
+    }
+
+    .cta a {
+      display: inline-block;
+      padding: 16px 45px;
+      border-radius: 40px;
+      background: linear-gradient(135deg,#f5c400,#ffe680);
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    /* ===== ANIMATIONS ===== */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    .fade-left {
+      opacity: 0;
+      transform: translateX(60px);
+    }
+
+    .fade-right {
+      opacity: 0;
+      transform: translateX(-60px);
+    }
+
+    .zoom-in {
+      opacity: 0;
+      transform: scale(0.85);
+    }
+
+    .show {
+      opacity: 1;
+      transform: translate(0,0) scale(1);
+      transition: all 0.9s ease;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+      .hero {
+        height: 50vh;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content fade-up">
+    <h1>Artificial Intelligence</h1>
+    <p>
+      تعلّم الذكاء الاصطناعي واستخدامه عمليًا  
+      في الشغل، الدراسة، وصناعة المحتوى.
+    </p>
+  </div>
+</section>
+
+<div class="container">
+
+  <!-- Learn -->
+  <div class="section fade-left">
+    <h2>🤖 هتتعلم إيه في AI؟</h2>
+    <div class="cards">
+
+      <div class="card">
+        <h3>مقدمة في الذكاء الاصطناعي</h3>
+        <ul>
+          <li>AI Concepts & Basics</li>
+          <li>Machine Learning Overview</li>
+          <li>كيف بيشتغل الذكاء الاصطناعي</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>أدوات الذكاء الاصطناعي</h3>
+        <ul>
+          <li>ChatGPT & Prompt Engineering</li>
+          <li>AI Writing Tools</li>
+          <li>AI Image & Video Tools</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>AI في الشغل</h3>
+        <ul>
+          <li>زيادة الإنتاجية</li>
+          <li>Automations</li>
+          <li>AI for Freelancers</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>AI في التسويق</h3>
+        <ul>
+          <li>AI Content Creation</li>
+          <li>Ads Optimization</li>
+          <li>Market Analysis</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>AI بدون برمجة</h3>
+        <ul>
+          <li>No-Code AI Tools</li>
+          <li>Workflows</li>
+          <li>Use Cases</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>المستقبل والفرص</h3>
+        <ul>
+          <li>AI Careers</li>
+          <li>Freelancing Opportunities</li>
+          <li>Ethics & Best Practices</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Who -->
+  <div class="section fade-right">
+    <h2>👤 المجال مناسب لمين؟</h2>
+    <div class="cards">
+      <div class="card">
+        <ul>
+          <li>أي شخص عايز يطوّر نفسه</li>
+          <li>طلاب</li>
+          <li>Freelancers</li>
+          <li>أصحاب البيزنس</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Benefits -->
+  <div class="section zoom-in">
+    <h2>🎯 هتستفيد إيه؟</h2>
+    <div class="cards">
+      <div class="card">
+        <ul>
+          <li>شغل أسرع وأذكى</li>
+          <li>ميزة تنافسية في السوق</li>
+          <li>فرص دخل جديدة</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Packages -->
+  <div class="section fade-up">
+    <h2>📦 البكدجات المتاحة</h2>
+    <div class="cards">
+      <div class="card">
+        <ul>
+          <li>Professional Track</li>
+          <li>Career Builder</li>
+          <li>Full Career Pack</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta zoom-in">
+    <a href="packages.html">اشترك في كورس الذكاء الاصطناعي</a>
+  </div>
+
+</div>
+
+<!-- ===== INTERSECTION OBSERVER ===== -->
+<script>
+  const animatedElements = document.querySelectorAll(
+    ".fade-up, .fade-left, .fade-right, .zoom-in"
+  );
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  animatedElements.forEach(el => observer.observe(el));
+</script>
+
+<!-- ===== FOOTER ===== -->
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<footer class="site-footer">
+
+  <div class="footer-container">
+
+    <!-- Brand -->
+    <div class="footer-box">
+      <h3>Team <span>V</span></h3>
+      <p>
+        منصة تعليمية متخصصة في إعداد الشباب لسوق العمل  
+        من خلال مسارات عملية ومهارات مطلوبة فعليًا.
+      </p>
+    </div>
+
+    <!-- Partners -->
+    <div class="footer-box">
+      <h4>Partners</h4>
+      <p>Plan B Academy</p>
+      <p>Lead Organization</p>
+    </div>
+
+    <!-- Links -->
+    <div class="footer-box">
+      <h4>روابط سريعة</h4>
+      <a href="index.html">الرئيسية</a>
+      <a href="fields.html">الكورسات</a>
+      <a href="packages.html">الباقات</a>
+      <a href="apply.html">عن Team V</a>
+      <a href="contact.html">تواصل معنا</a>
+    </div>
+
+    <!-- Contact & Social -->
+    <div class="footer-box">
+      <h4>تواصل معنا</h4>
+
+      <p>
+        <i class="fa-solid fa-phone"></i>
+        <a href="tel:01094855679">01094855679</a>
+      </p>
+      <p>
+        <i class="fa-solid fa-phone"></i>
+        <a href="tel:01501503833">01501503833</a>
+      </p>
+
+      <div class="social">
+        <a href="https://www.facebook.com/hamdy.alrifai1?mibextid=ZbWKwL" target="_blank">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/hamdy.alrifai1?igsh=MWpnaXF2d2hyYnI2Zg==" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/201094855679" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Team V — Powered by Plan B & Lead Organization
+  </div>
+
+</footer>
+
+<style>
+.site-footer{
+  background:#0f172a;
+  color:#fff;
+  margin-top:80px;
+}
+.footer-container{
+  max-width:1100px;
+  margin:auto;
+  padding:50px 20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+}
+.footer-box h3{
+  font-size:22px;
+  margin-bottom:12px;
+}
+.footer-box h3 span{
+  color:#f5c400;
+}
+.footer-box h4{
+  color:#f5c400;
+  margin-bottom:12px;
+}
+.footer-box p,
+.footer-box a{
+  font-size:14px;
+  line-height:1.8;
+  opacity:.9;
+  color:#fff;
+  text-decoration:none;
+  display:block;
+}
+.footer-box a:hover{
+  color:#f5c400;
+}
+
+/* Social Icons */
+.social{
+  display:flex;
+  gap:12px;
+  margin-top:12px;
+}
+.social a{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.12);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  transition:.3s;
+}
+.social a:hover{
+  background:#f5c400;
+  color:#000;
+}
+
+.footer-bottom{
+  text-align:center;
+  padding:18px;
+  background:#020617;
+  font-size:14px;
+  opacity:.8;
+}
+</style>
+
+</body>
+</html>

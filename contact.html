@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team V | About Us</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+  <!-- Main Style -->
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Cairo,sans-serif;
+    }
+
+    body{
+      background:linear-gradient(180deg,#1f2a44,#243b6b);
+      color:#fff;
+    }
+
+    /* Navbar */
+    .navbar{
+      background:#162038;
+      padding:15px 25px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .logo{
+      font-size:22px;
+      font-weight:bold;
+    }
+    .logo span{
+      color:#f5c400;
+    }
+
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      margin-right:15px;
+      font-size:15px;
+      opacity:.9;
+    }
+    nav a.active,
+    nav a:hover{
+      color:#f5c400;
+    }
+
+    /* Container */
+    .container{
+      max-width:900px;
+      margin:60px auto;
+      padding:0 20px;
+    }
+
+    .section{
+      background:rgba(255,255,255,0.08);
+      padding:25px;
+      border-radius:22px;
+      margin-bottom:30px;
+      animation:fadeUp .7s ease;
+    }
+
+    h2{
+      color:#f5c400;
+      margin-bottom:15px;
+      font-size:22px;
+    }
+
+    h2 i{
+      margin-left:8px;
+    }
+
+    p{
+      line-height:1.9;
+      opacity:.9;
+    }
+
+    /* Quick Contact */
+    .quick{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:15px;
+    }
+
+    .quick a{
+      background:rgba(0,0,0,.35);
+      padding:15px;
+      border-radius:16px;
+      text-align:center;
+      color:#fff;
+      font-weight:bold;
+      text-decoration:none;
+      transition:.3s;
+    }
+
+    .quick a i{
+      color:#f5c400;
+      margin-left:6px;
+    }
+
+    .quick a:hover{
+      transform:scale(1.05);
+      box-shadow:0 0 12px rgba(245,196,0,.5);
+    }
+
+    /* FAQ */
+    .faq-box{
+      background:rgba(0,0,0,.35);
+      border-radius:18px;
+      margin-bottom:15px;
+      overflow:hidden;
+    }
+
+    .faq-question{
+      padding:18px;
+      cursor:pointer;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      font-weight:bold;
+    }
+
+    .faq-question i{
+      transition:.4s;
+    }
+
+    .faq-answer{
+      max-height:0;
+      overflow:hidden;
+      padding:0 18px;
+      line-height:1.9;
+      font-size:15px;
+      transition:.6s;
+      opacity:.9;
+    }
+
+    .faq-box.active .faq-answer{
+      max-height:300px;
+      padding:15px 18px 25px;
+    }
+
+    .faq-box.active .faq-question i{
+      transform:rotate(180deg);
+      color:#f5c400;
+    }
+
+    .faq-icon{
+      text-align:center;
+      margin-bottom:10px;
+    }
+
+    .faq-icon i{
+      font-size:46px;
+      color:#f5c400;
+    }
+
+    @keyframes fadeUp{
+      from{opacity:0;transform:translateY(25px)}
+      to{opacity:1;transform:translateY(0)}
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<header class="navbar">
+  <div class="logo">Team <span>V</span></div>
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="fields.html">الكورسات</a>
+    <a href="packages.html">الباقات</a>
+    <a href="apply.html">عن Team V</a>
+    <a href="contact.html" class="active">تواصل معنا</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <!-- Welcome -->
+  <div class="section">
+    <h2><i class="fa-solid fa-handshake"></i> يسعدنا تواصلك</h2>
+    <p>
+      فريق <b>Team V</b> جاهز يساعدك تختار المسار المناسب ليك  
+      وياخد بإيدك خطوة بخطوة لحد الشغل.
+    </p>
+  </div>
+
+  <!-- Quick Contact -->
+  <div class="section">
+    <h2><i class="fa-solid fa-bolt"></i> تواصل سريع</h2>
+    <div class="quick">
+      <a href="https://wa.me/201094855679" target="_blank">
+        واتساب مباشر <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      <a href="tel:01094855679">
+        اتصال هاتفي <i class="fa-solid fa-phone"></i>
+      </a>
+      <a href="mailto:teamv@gmail.com">
+        البريد الإلكتروني <i class="fa-solid fa-envelope"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Working Hours -->
+  <div class="section">
+    <h2><i class="fa-solid fa-clock"></i> أوقات العمل</h2>
+    <p>
+      يوميًا من 10 صباحًا حتى 10 مساءً  
+      <br>ماعدا الجمعة
+    </p>
+  </div>
+
+  <!-- FAQ -->
+  <div class="section">
+    <h2><i class="fa-solid fa-circle-question"></i> الأسئلة الشائعة</h2>
+
+    <div class="faq-box">
+      <div class="faq-question">
+        هل يحصل المتدرب على شهادة؟
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-icon"><i class="fa-solid fa-certificate"></i></div>
+        نعم، شهادة معتمدة من Team V بعد إتمام الكورس.
+      </div>
+    </div>
+
+    <div class="faq-box">
+      <div class="faq-question">
+        هل الكورسات مناسبة للمبتدئين؟
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-icon"><i class="fa-solid fa-user-graduate"></i></div>
+        أيوه، كل الكورسات تبدأ من الصفر.
+      </div>
+    </div>
+
+    <div class="faq-box">
+      <div class="faq-question">
+        مدة صلاحية الكورس؟
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-icon"><i class="fa-solid fa-infinity"></i></div>
+        الكورس متاح مدى الحياة.
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+document.querySelectorAll(".faq-question").forEach(q=>{
+  q.onclick = ()=>{
+    q.parentElement.classList.toggle("active");
+  }
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ===== FORM + FAQ SECTION ===== -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<section class="extra-section">
+
+  <!-- ===== FORM ===== -->
+  <div class="box">
+    <h2><i class="fa-solid fa-paper-plane"></i> ابعتلنا رسالة</h2>
+
+    <form onsubmit="sendForm(event)">
+      <input type="text" id="name" placeholder="الاسم بالكامل" required>
+      <input type="tel" id="phone" placeholder="رقم الهاتف" required>
+      <input type="email" id="email" placeholder="البريد الإلكتروني (اختياري)">
+      <textarea id="message" placeholder="اكتب استفسارك هنا..." required></textarea>
+
+      <button type="submit">إرسال الرسالة</button>
+    </form>
+
+    <p class="note">سيتم التواصل معك في أقرب وقت</p>
+  </div>
+
+  <!-- ===== FAQ ===== -->
+  <div class="box">
+    <h2><i class="fa-solid fa-circle-question"></i> أسئلة شائعة أخرى</h2>
+
+    <div class="faq-box">
+      <div class="faq-question">
+        هل الشهادة معتمدة من جهات رسمية؟
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-icon"><i class="fa-solid fa-building-columns"></i></div>
+        الشهادة معتمدة من Team V وتفيدك في التقديم على الوظائف والعمل الحر.
+      </div>
+    </div>
+
+    <div class="faq-box">
+      <div class="faq-question">
+        هل يمكن مشاركة الكورس مع شخص آخر؟
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-icon"><i class="fa-solid fa-user-lock"></i></div>
+        لا، الكورس مخصص لشخص واحد فقط للحفاظ على جودة المحتوى.
+      </div>
+    </div>
+
+    <div class="faq-box">
+      <div class="faq-question">
+        ماذا أفعل إذا واجهت مشكلة تقنية؟
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-icon"><i class="fa-solid fa-headset"></i></div>
+        يوجد دعم فني متاح لمساعدتك فورًا في أي مشكلة.
+      </div>
+    </div>
+
+    <div class="faq-box">
+      <div class="faq-question">
+        ما هي أكثر الكورسات طلبًا؟
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-icon"><i class="fa-solid fa-fire"></i></div>
+        البرمجة، الديجيتال ماركتنج، الجرافيك ديزاين، والمونتاج.
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+.extra-section{
+  max-width:900px;
+  margin:80px auto;
+  padding:0 20px;
+  color:#fff;
+}
+.box{
+  background:rgba(255,255,255,0.08);
+  padding:25px;
+  border-radius:22px;
+  margin-bottom:40px;
+}
+.box h2{
+  color:#f5c400;
+  margin-bottom:18px;
+}
+.box h2 i{
+  margin-left:8px;
+}
+
+/* Form */
+form input, form textarea{
+  width:100%;
+  padding:14px;
+  border-radius:14px;
+  border:none;
+  margin-bottom:15px;
+  background:#111827;
+  color:#fff;
+}
+form textarea{
+  resize:none;
+  height:120px;
+}
+button{
+  width:100%;
+  padding:16px;
+  border:none;
+  border-radius:40px;
+  background:linear-gradient(135deg,#f5c400,#ffe680);
+  color:#000;
+  font-size:18px;
+  font-weight:bold;
+  cursor:pointer;
+}
+.note{
+  font-size:13px;
+  opacity:.8;
+  margin-top:10px;
+  text-align:center;
+}
+
+/* FAQ */
+.faq-box{
+  background:rgba(0,0,0,.35);
+  border-radius:18px;
+  margin-bottom:14px;
+  overflow:hidden;
+}
+.faq-question{
+  padding:16px 18px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  cursor:pointer;
+  font-weight:bold;
+}
+.faq-question i{
+  transition:.4s;
+}
+.faq-answer{
+  max-height:0;
+  overflow:hidden;
+  padding:0 18px;
+  font-size:15px;
+  line-height:1.9;
+  transition:.6s;
+  opacity:.9;
+}
+.faq-icon{
+  text-align:center;
+  margin:15px 0 10px;
+}
+.faq-icon i{
+  font-size:42px;
+  color:#f5c400;
+}
+.faq-box.active .faq-answer{
+  max-height:260px;
+  padding:15px 18px 25px;
+}
+.faq-box.active .faq-question i{
+  transform:rotate(180deg);
+  color:#f5c400;
+}
+</style>
+
+<script>
+/* FAQ Toggle */
+document.querySelectorAll(".faq-question").forEach(q=>{
+  q.onclick = ()=> q.parentElement.classList.toggle("active");
+});
+
+/* Send Form to WhatsApp */
+function sendForm(e){
+  e.preventDefault();
+  const name=document.getElementById("name").value;
+  const phone=document.getElementById("phone").value;
+  const email=document.getElementById("email").value;
+  const message=document.getElementById("message").value;
+
+  let text=`رسالة جديدة - Team V\n\n`;
+  text+=`الاسم: ${name}\n`;
+  text+=`الهاتف: ${phone}\n`;
+  if(email) text+=`الإيميل: ${email}\n`;
+  text+=`\nالرسالة:\n${message}`;
+
+  window.open(
+    `https://wa.me/201094855679?text=${encodeURIComponent(text)}`,
+    "_blank"
+  );
+}
+</script>
+
+
+
+
+<!-- ===== FOOTER ===== -->
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<footer class="site-footer">
+
+  <div class="footer-container">
+
+    <!-- Brand -->
+    <div class="footer-box">
+      <h3>Team <span>V</span></h3>
+      <p>
+        منصة تعليمية متخصصة في إعداد الشباب لسوق العمل  
+        من خلال مسارات عملية ومهارات مطلوبة فعليًا.
+      </p>
+    </div>
+
+    <!-- Partners -->
+    <div class="footer-box">
+      <h4>Partners</h4>
+      <p>Plan B Academy</p>
+      <p>Lead Organization</p>
+    </div>
+
+    <!-- Links -->
+    <div class="footer-box">
+      <h4>روابط سريعة</h4>
+      <a href="index.html">الرئيسية</a>
+      <a href="fields.html">الكورسات</a>
+      <a href="packages.html">الباقات</a>
+      <a href="apply.html">عن Team V</a>
+      <a href="contact.html">تواصل معنا</a>
+    </div>
+
+    <!-- Contact & Social -->
+    <div class="footer-box">
+      <h4>تواصل معنا</h4>
+
+      <p>
+        <i class="fa-solid fa-phone"></i>
+        <a href="tel:01094855679">01094855679</a>
+      </p>
+      <p>
+        <i class="fa-solid fa-phone"></i>
+        <a href="tel:01501503833">01501503833</a>
+      </p>
+
+      <div class="social">
+        <a href="https://www.facebook.com/hamdy.alrifai1?mibextid=ZbWKwL" target="_blank">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/hamdy.alrifai1?igsh=MWpnaXF2d2hyYnI2Zg==" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/201094855679" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Team V — Powered by Plan B & Lead Organization
+  </div>
+
+</footer>
+
+<style>
+.site-footer{
+  background:#0f172a;
+  color:#fff;
+  margin-top:80px;
+}
+.footer-container{
+  max-width:1100px;
+  margin:auto;
+  padding:50px 20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+}
+.footer-box h3{
+  font-size:22px;
+  margin-bottom:12px;
+}
+.footer-box h3 span{
+  color:#f5c400;
+}
+.footer-box h4{
+  color:#f5c400;
+  margin-bottom:12px;
+}
+.footer-box p,
+.footer-box a{
+  font-size:14px;
+  line-height:1.8;
+  opacity:.9;
+  color:#fff;
+  text-decoration:none;
+  display:block;
+}
+.footer-box a:hover{
+  color:#f5c400;
+}
+
+/* Social Icons */
+.social{
+  display:flex;
+  gap:12px;
+  margin-top:12px;
+}
+.social a{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.12);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  transition:.3s;
+}
+.social a:hover{
+  background:#f5c400;
+  color:#000;
+}
+
+.footer-bottom{
+  text-align:center;
+  padding:18px;
+  background:#020617;
+  font-size:14px;
+  opacity:.8;
+}
+</style>
+
+</body>
+</html>
